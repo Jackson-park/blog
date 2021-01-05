@@ -12,13 +12,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-refresher (ionRefresh)="doRefresh($event)" slot="fixed">
+<ion-content [scrollEvents]="true" fullscreen="true" forceOverscroll="true">
+  <ion-refresher (ionRefresh)="doRefresh($event)" slot="fixed" mode="ios" pull-factor="0.5" pull-max="auto">
     <ion-refresher-content
-      pullingIcon="arrow-down-outline"
-      pullingText="Pull to refresh"
-      refreshingSpinner="circles"
-      refreshingText="Refreshing...">
+      pullingIcon="null"
+      refreshingSpinner="lines">
     </ion-refresher-content>
   </ion-refresher>
 
