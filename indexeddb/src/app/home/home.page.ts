@@ -52,7 +52,7 @@ export class HomePage implements OnInit {
         .catch(err => console.log(err));
 
     }, () => {
-      this.filter.myLocation = {longitude: 7.5663964, latitude: 46.9268287};
+      this.filter.myLocation = {longitude: 126.96877973113257, latitude: 37.401654556495124};
       this.earthquakeService.initProvider()
         .then(() => this.filterEarthquakes())
         .catch(err => console.log(err));

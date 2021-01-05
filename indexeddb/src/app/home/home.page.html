@@ -1,21 +1,21 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Earthquakes
-      <ion-note>({{earthquakes?.length}}, {{elapsedTime | number:'1.0-0'}} ms)</ion-note>
+      지진현황
+      <ion-note>({{earthquakes?.length}}건, {{elapsedTime | number:'1.0-0'}} ms)</ion-note>
     </ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="presentFilterPage()">
         <ion-icon name="options-outline" slot="icon-only"></ion-icon>
-      </ion-button>
+      </ion-button> 
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [scrollEvents]="true" fullscreen="true" forceOverscroll="true">
+<ion-content [scrollEvents]="true" forceOverscroll="true">
   <ion-refresher (ionRefresh)="doRefresh($event)" slot="fixed" mode="ios" pull-factor="0.5" pull-max="auto">
     <ion-refresher-content
-      pullingIcon="null"
+      pullingIcon="lines"
       refreshingSpinner="lines">
     </ion-refresher-content>
   </ion-refresher>
